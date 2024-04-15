@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Practical 4</title>
+	<style>
+        /* Universal selector to change all fonts to Roboto regular */
+        * {
+            font-family: 'Roboto', sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Child and sibling selectors to change font weight to bold */
+        h1 > strong {
+            font-weight: bold;
+        }
+
+        /* :hover pseudo-class to change background color */
+        a:hover {
+            background-color: lightgrey;
+        }
+
+        /* :last-child pseudo-class to change text color of last column in the table */
+        table tr td:last-child {
+            color: blue;
+        }
+
+        /* :even and :odd pseudo-classes to alternate row styles */
+        ul li:nth-child(odd),
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        ul li:nth-child(even),
+        table tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        p:hover {
+    background-color: lightblue;
+}
+
+        /* ::selection pseudo-element to style user-selected text */
+        ::selection {
+            background-color: yellow;
+        }
+		
+		:not(p):not(h1):not(h3) {
+    color: gray;
+}
+
+        /* ::before pseudo-element to emulate list style with Unicode character */
+        ul:before {
+            content: "\2192"; /* Rightwards arrow Unicode character */
+            padding-right: 5px;
+        }
+    </style>
+</head>
+<body id="top">
+    <main>
+        <section id="text">
+            <header>
+                <h1>Practical 4</h1>
+            </header>
+            <article id="text__paragraphs">
+                <header>
+                    <h2>Paragraphs</h2>
+                </header>
+                <div>
+                    <p>A paragraph (from the Greek paragraphos, “to write beside” or “written beside”) is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</p>
+
+                    <h2>Selector Specificity</h2>
+                    <p>Selector specificity is a measure of how specific a CSS selector is in targeting HTML elements. It determines which CSS rules are applied to an element when multiple rules conflict. Specificity is calculated based on the components of a selector: the number of ID selectors, class selectors, and type selectors, with higher numbers indicating higher specificity.</p>
+                    <p><strong>Calculation:</strong> Specificity is typically represented as a four-digit number, where:</p>
+                    <ul>
+                        <li>The first digit represents the number of ID selectors.</li>
+                        <li>The second digit represents the number of class selectors, attribute selectors, and pseudo-classes.</li>
+                        <li>The third digit represents the number of type selectors and pseudo-elements.</li>
+                        <li>The fourth digit represents the number of inline styles.</li>
+                    </ul>
+
+                    <h3>Complex Selectors</h3>
+                    <p>Complex selectors are CSS selectors that combine multiple simple selectors to target elements more precisely. They allow you to define styles for elements based on their relationship with other elements or their attributes.</p>
+                    <p>Examples of complex selectors include descendant selectors, child selectors, adjacent sibling selectors, and attribute selectors combined with other selectors.</p>
+
+                    <h2>Difference between Pseudo-classes and Pseudo-elements</h2>
+                    <p><strong>Pseudo-classes:</strong> Pseudo-classes are keywords added to selectors that specify a special state of the selected element. They are used to style elements based on user interaction or document structure that can't be expressed using simple selectors alone. Examples include :hover, :active, :focus, :nth-child(), etc.</p>
+                    <p><strong>Pseudo-elements:</strong> Pseudo-elements are keywords added to selectors that create virtual elements in the document tree. They allow you to style parts of an element's content, such as the first line of a paragraph or the first letter of a word. Examples include ::before, ::after, ::first-line, ::first-letter, etc.</p>
+                </div>
+                <footer>
+                    <p><a href="#top">[Top]</a></p>
+                </footer>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
+
